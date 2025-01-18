@@ -1,0 +1,265 @@
+.dish_block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.dish {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 100%;
+    padding: 30px 40px 30px 40px;
+    background-color: white;
+    border-radius: 35px;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    cursor: pointer;
+}
+
+.dish:hover {
+    border: 2px solid tomato;
+}
+
+.dish.hidden {
+    display: none;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters a {
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+    color: green;
+    border-radius: 35px;
+}
+
+.filters .active {
+    background-color: rgba(144, 238, 144, 30);
+}
+
+button {
+    width: 100%;
+    background-color: #f1eee9;
+    margin-top: 10px;
+    padding: 10px 30px 10px 30px;
+    border: None;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.dish:hover button {
+    background-color: tomato;
+    color: white;
+}
+
+.dish:active button {
+    background-color: coral;
+}
+
+.dish img {
+    width: 100%;
+    height: auto;
+    border-radius: 35px;
+}
+
+.dish div {
+    text-align: center;
+}
+
+.price {
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+}
+
+.dish_name {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+
+.volume {
+    color: gray;
+}
+
+.combo-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.combo-variant {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.combo-dish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#combo h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.combo-dish img {
+    width: 8em;
+    height: auto;
+}
+
+.combo-dish img:hover {
+    transform: scale(1.2) translateY(-10px);
+}
+
+.combo-dish p {
+    margin-bottom: 0;
+}
+
+.combo-dish p:nth-of-type(2) {
+    font-size: 14px;
+}
+
+.order_form {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+#order_form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.order_section {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0;
+}
+
+.order_section p {
+    font-size: 20px;
+    height: 10px;
+}
+
+.note {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.note i {
+    font-size: 16px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="time"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.subscribe_checkbox {
+    display: flex;
+}
+
+.form_actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form_actions button {
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 0;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.form_actions button:hover {
+    background-color: gray;
+}
+
+.custom-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.custom-notification button {
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.custom-notification button:hover {
+    background-color: gray;
+}
+
+#order_info {
+    position: sticky;
+    bottom: 10px;
+    padding-bottom: 5px;
+    background-color: white;
+    border-radius: 35px;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    text-align: center;
+}
+
+#order_info p {
+    font-size: 20px;
+}
+
+@media (max-width: 800px) {
+    .dish_block {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .dish_block {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
