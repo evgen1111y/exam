@@ -24,7 +24,7 @@ async function fetchProducts() {
     const perPage = urlParams.get('per_page') ? urlParams.get('per_page') : 12;
     const sortOrder = urlParams.get('sort_order') ? urlParams.get('sort_order') : 'rating_desc';
     document.getElementById('sort_order').value = sortOrder;
-    const response = await fetch(`https://edu.std-900.ist.mospolytech.ru/exam-2024-1/api/goods?api_key=b82a7396-638e-4eef-82fc-1f759b30701b&page=${page}&per_page=${perPage}&sort_order=${sortOrder}`);
+    const response = await fetch(`https://edu.std-900.ist.mospolytech.ru/exam-2024-1/api/goods?api_key=8b8bb635-cc99-4152-92ae-265cca506574&page=${page}&per_page=${perPage}&sort_order=${sortOrder}`);
     return await response.json();
 }
 
