@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/styles.css" rel="stylesheet">
+    <link href="styles/index.css" rel="stylesheet">
+    <link rel="shortcut icon" href="icons/logo.svg">
+    <title>Главная страница</title>
+    <script src="scripts_js/index.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img class="logo" src="icons/logo.svg" alt=""></a>
+        <div class="search-bar">
+            <input id="search" type="text" placeholder="Введите запрос">
+            <button><img src="icons/search.svg" alt=""></button>
+        </div>
+        <div class="menu-items">
+            <a href="orders.html"><img src="icons/user.svg" alt=""></a>
+            <a href="cart.html"><img src="icons/cart.svg" alt=""></a>
+        </div>
+    </header>
+
+    <div id="notification-container"></div>
+    <section>
+        <div class="sidebar">
+            <h2>Категории</h2>
+            <label><input type="checkbox">Дом & Кухня</label>
+            <label><input type="checkbox">ТВ, аудио & камеры</label>
+            <label><input type="checkbox">Спорт & фитнес</label>
+            <label><input type="checkbox">Красота & здоровье</label>
+            <h2>Стоимость</h2>
+            <label>От <input type="number" id="price-start"> ₽</label>
+            <label>До <input type="number" id="price-end"> ₽</label>
+            <button>Применить</button>
+        </div>
+
+        <div class="container">
+            <div id="header-and-sort">
+                <h2>Каталог</h2>
+                <select id="sort_order">
+                    <option id="rating_asc" value="rating_asc">По возрастанию рейтинга</option>
+                    <option id="rating_desc" value="rating_desc" selected="selected">По убыванию рейтинга</option>
+                    <option id="price_asc" value="price_asc">По возрастанию цены</option>
+                    <option id="price_desc" value="price_desc">По убыванию цены</option>
+                </select>
+            </div>
+            <div class="product-container"></div>
+            <div id="pages-container"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 ExamShop. Все права защищены.</p>
+        <p>Напишите нам: info@examshop.com</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icons/logo.svg">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/orders.css">
+    <title>Личный кабинет</title>
+    <script src="scripts_js/orders.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img class="logo" src="icons/logo.svg" alt=""></a>
+        <div class="menu-items">
+            <a href="orders.html"><img src="icons/user.svg" alt=""></a>
+            <a href="cart.html"><img src="icons/cart.svg" alt=""></a>
+        </div>
+    </header>
+
+    <div id="notification-container"></div>
+    
+    <div class="container">
+        <h2>Заказы</h2>
+        <table id="orders">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Дата оформления</th>
+                    <th>Состав заказа</th>
+                    <th>Стоимость</th>
+                    <th>Доставка</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div class="modal" id="readModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Просмотр заказа</h2>
+                    <button class="close">&times;</button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-buttons">
+                    <button class="cancel">Ок</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="editModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Редактирование заказа</h2>
+                    <button class="close">&times;</button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-buttons">
+                    <button class="cancel">Отмена</button>
+                    <button id="saveButton">Сохранить</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="deleteModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Удаление заказа</h2>
+                    <button class="close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>Вы уверены, что хотите удалить заказ?</p>
+                </div>
+                <div class="modal-buttons">
+                    <button class="cancel">Отмена</button>
+                    <button id="deleteButton">Да</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 ExamShop. Все права защищены.</p>
+        <p>Напишите нам: info@examshop.com</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icons/logo.svg">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/cart.css">
+    <title>Корзина</title>
+    <script src="scripts_js/cart.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img class="logo" src="icons/logo.svg" alt=""></a>
+        <div class="menu-items">
+            <a href="orders.html"><img src="icons/user.svg" alt=""></a>
+            <a href="cart.html"><img src="icons/cart.svg" alt=""></a>
+        </div>
+    </header>
+
+    <div id="notification-container"></div>
+    <div class="container">
+        <h2>Состав заказа</h2>
+        <div class="product-container">
+            <p class="nothing-selected">Ничего не выбрано. Чтобы добавить товары в корзину, перейдите на страницу
+            <a class="nothing-selected link" href="index.html">магазина</a>.</p>
+        </div>
+
+        <h2>Оформление заказа</h2>
+        <form id="order-form" class="order-form">
+            <div class="order-section">
+                <label for="full_name">Имя</label>
+                <input type="text" id="full_name" name="full_name" required>
+
+                <label for="phone">Номер телефона</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <div class="subscribe_checkbox">
+                    <input type="checkbox" id="subscribe" name="subscribe" checked>
+                    <label for="subscribe">Подписаться на рассылку</label>
+                </div>
+
+                <label for="comment">Комментарии к заказу</label>
+                <textarea id="comment" name="comment" rows="3"></textarea>
+            </div>
+
+            <div class="order-section">
+                <label for="delivery_address">Адрес доставки</label>
+                <input type="text" id="delivery_address" name="delivery_address" required>
+
+                <label for="delivery_date">Дата доставки</label>
+                <input type="date" id="delivery_date" name="delivery_date" min="{{today}}" required>
+
+                <label for="delivery_interval">Временной интервал доставки</label>
+                <select id="delivery_interval" name="delivery_interval" required>'
+                    <option value="08:00-12:00">08:00-12:00</option>
+                    <option value="12:00-14:00">12:00-14:00</option>
+                    <option value="14:00-18:00">14:00-18:00</option>
+                    <option value="18:00-22:00">18:00-22:00</option>
+                </select>
+
+                <h3 id="total-price"></h3>
+                <p id="delivery-price"></p>
+
+                <div class="form-actions">
+                    <button type="reset">Сбросить</button>
+                    <button type="submit">Отправить</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 ExamShop. Все права защищены.</p>
+        <p>Напишите нам: info@examshop.com</p>
+    </footer>
+</body>
+</html>
