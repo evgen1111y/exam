@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 async function fetchProducts() {
-    const response = await fetch('https://edu.std-900.ist.mospolytech.ru/exam-2024-1/api/goods?api_key=b82a7396-638e-4eef-82fc-1f759b30701b');
+    const response = await fetch('https://edu.std-900.ist.mospolytech.ru/exam-2024-1/api/goods?api_key=8b8bb635-cc99-4152-92ae-265cca506574');
     return await response.json();
 }
 
@@ -139,7 +139,7 @@ async function submitOrder(e) {
     formData.set('delivery_date', formatDate(document.getElementById('delivery_date').value));
     formData.set('subscribe', document.getElementById('subscribe').value === 'on');
 
-    const response = await fetch('https://edu.std-900.ist.mospolytech.ru/exam-2024-1/api/orders?api_key=b82a7396-638e-4eef-82fc-1f759b30701b', {
+    const response = await fetch('https://edu.std-900.ist.mospolytech.ru/exam-2024-1/api/orders?api_key=8b8bb635-cc99-4152-92ae-265cca506574', {
         method: 'POST',
         body: formData
     });
